@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="cont1">
+        <div class="mainBox">
+            <div class="first"><img src="./img/logo.png" alt="logo"></div>
+            <div class="second">
+                <a href="index.html">
+                    <h2>HOME</h2>
+                </a>
+            </div>
+        </div>
+        <div class="title">
+            <h2>CALCULATE <br> VELOCITY</h2>
+        </div>
+    </div>
+
+
+    <div class="cont2">
+        <div class="setBg">
+            <div class="first">
+                <h2>VELOCITY:</h2>
+            </div>
+            <div class="second">
+                <p>Velocity of a body is the distance travelled by it per unit time in a given direction.
+                    <br>
+                    v=s/t
+                    <br>
+                    If a body travels a distance ‘s’ in time ‘t’ in a given direction, then its velocity ‘v’ is given
+                    by:
+                    <br>
+                    where v = velocity of the body
+                    <br>
+                    s = distance travelled (in the given direction) and t = time taken (to travel that distance)
+                    <br>   <br>
+                    The SI unit of velocity is the same as the speed (m/s)
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cont3">
+        <div class="setBg">
+
+            <div class="first">
+
+                <div class="setItem">
+                    <div class="setL">
+                        <label for="">DIS.MENT</label>
+                    </div>
+                    <input type="" id="" placeholder="Enter Unit in Meter">
+                </div>
+
+                <div class="setItem">
+                    <div class="setL">
+                        <label for="">TIME</label>
+                    </div>
+                    <input type="" id="" placeholder="Enter Unit in Second">
+                </div>
+
+
+                <div class="setItem">
+                    <div class="setL">
+                        <label for="">CALCULATE</label>
+                    </div>
+                    <input type="" id="" placeholder="Result in  m/s">
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="second">
+
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <div id="chart_div"></div>
+                <div class="mainIn"> <input type="number" placeholder="D 1">
+                    <input type="number" name="" placeholder="D 2">
+                    <input type="number" name="" placeholder="D 3">
+                    <input type="number" name="" placeholder="T 1">
+                    <input type="number" name="" placeholder="T 2">
+                    <input type="number" name="" placeholder="T 3">
+                    <button>Show Graph</button>
+                    <button>Reset</button>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- fotter -->
+    <div class="div6">
+        <div class="box">
+            <img src="./img/logo.png" alt="">
+        </div>
+        <div class="box">
+            <h2>Our Services</h2>
+            <br>
+            <p>Mobile Developmentt</p>
+            <p>Web Development</p>
+            <p>Theme Development</p>
+            <p>Productive Application</p>
+        </div>
+        <div class="box">
+            <h2>About Us</h2>
+            <br>
+            <p> Explore Formula</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Contact</p>
+        </div>
+        <div class="box">
+            <h2>Get Social </h2>
+            <div class="soMed">
+                <div class="b"><img src="./img/ins.png" alt=""></div>
+                <div class="b"><img src="./img/fac.png" alt=""></div>
+                <div class="b"><img src="./img/twi.png" alt=""></div>
+            </div>
+            <p>info@explore-formula.net</p>
+        </div>
+    </div>
+    <div class="setBottom">
+        <p>
+            This website was designed by Explore Team.
+        </p>
+    </div>
+
+
+
+
+
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Dogs');
+            let a = 10;
+            let b = 18;
+            let c = 5;
+            let d = 10;
+            let e = 70;
+            let f = 23;
+
+            data.addRows([
+                [a, b], [c, d], [e, f],
+
+            ]);
+
+            var options = {
+                hAxis: {
+                    title: 'Time'
+                },
+                vAxis: {
+                    title: 'Popularity'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</body>
+
+</html>
